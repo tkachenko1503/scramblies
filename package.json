@@ -9,7 +9,7 @@
   "scripts": {
     "shadow-watch-app": "shadow-cljs watch app",
     "shadow-release-app": "shadow-cljs release app",
-    "build": "concurrently --kill-others \"npm run shadow-release-app\" \"lein uberjar\""
+    "build": "concurrently \"npm run shadow-release-app\" \"lein uberjar\""
   },
   "dependencies": {
     "concurrently": "4.1.0",
