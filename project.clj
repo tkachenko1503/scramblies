@@ -25,9 +25,10 @@
 
   :repl-options {:port 7888}
 
-  :profiles {:uberjar
-             {:aot :all}
+  :profiles {:uberjar {:aot :all}
 
-             :dev
-             {:dependencies
-              [[javax.servlet/servlet-api "2.5"]]}})
+             :dev {:dependencies
+                   [[javax.servlet/servlet-api "2.5"]]
+
+                   :plugins
+                   [[com.jakemccrary/lein-test-refresh "0.23.0"]]}})

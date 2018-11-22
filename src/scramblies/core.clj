@@ -16,8 +16,13 @@
 
 
 (defn scramble-response [source base]
-  {:status 200
-   :body   {:scramblies (scramble source base)}})
+  (try
+    {:status 200
+     :body   {:scramblies (scramble source base)}}
+    (catch Throwable e
+      {:status 422
+       :body   {:error   e
+                :message (.getMessage e)}})))
 
 
 (defroutes scramblies-routes
@@ -40,9 +45,3 @@
       (json/wrap-json-body {:keywords? true})
       json/wrap-json-response
       (run-server {:port port}))))
-
-
-(comment
-  (def stop-server (-main))
-  (stop-server)
-  nil)

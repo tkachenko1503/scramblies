@@ -39,10 +39,11 @@ body {
 
 .form__fields {
     display: flex;
+    justify-content: center;
 }
 
 .form__field {
-    flex: 1 0;
+    flex: 0 0 30%;
 }
 
 .form__field + .form__field {
@@ -58,13 +59,14 @@ body {
     padding: 14px;
     outline: none;
     font-family: 'Allerta Stencil', sans-serif;
+    font-size: 14px;
 }
 
 .form__input-message {
     color: #d55f5f;
     font-size: 12px;
     height: 16px;
-    display: inline-block;
+    display: block;
 }
 
 .form__submit {
