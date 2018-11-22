@@ -8,9 +8,11 @@
   },
   "scripts": {
     "shadow-watch-app": "shadow-cljs watch app",
-    "shadow-release-app": "shadow-cljs release app"
+    "shadow-release-app": "shadow-cljs release app",
+    "build": "concurrently --kill-others \"npm run shadow-release-app\" \"lein uberjar\""
   },
   "dependencies": {
+    "concurrently": "4.1.0",
     "create-react-class": "15.6.3",
     "react": "16.4.2",
     "react-dom": "16.4.2",
