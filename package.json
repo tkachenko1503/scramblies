@@ -8,8 +8,7 @@
   },
   "scripts": {
     "shadow-watch-app": "shadow-cljs watch app",
-    "shadow-release-app": "shadow-cljs release app",
-    "postinstall": "npm run shadow-release-app"
+    "shadow-release-app": "shadow-cljs release app"
   },
   "dependencies": {
     "create-react-class": "15.6.3",
