@@ -8,6 +8,7 @@
   :dependencies [[org.clojure/clojure "1.9.0"]
                  [http-kit "2.3.0"]
                  [compojure "1.6.1"]
+                 [javax.servlet/servlet-api "2.5"]
                  [ring/ring-json "0.4.0"]
                  [environ "1.1.0"]
                  [thheller/shadow-cljs "2.7.2"]
@@ -21,14 +22,12 @@
 
   :main ^:skip-aot scramblies.core
 
+  :uberjar-name "scramblies.jar"
+
   :target-path "target/%s"
 
   :repl-options {:port 7888}
 
   :profiles {:uberjar {:aot :all}
 
-             :dev {:dependencies
-                   [[javax.servlet/servlet-api "2.5"]]
-
-                   :plugins
-                   [[com.jakemccrary/lein-test-refresh "0.23.0"]]}})
+             :dev     {:plugins [[com.jakemccrary/lein-test-refresh "0.23.0"]]}})
